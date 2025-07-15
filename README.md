@@ -1,6 +1,8 @@
 # 🎯 Spin & Win Game - Python Backend API
 
-This is a Django-based backend project for a **Spin & Win** game app. It includes features such as user registration, quizzes, predictions, OTP verification, wallet management, payment integrations, and spinning/scratching rewards.
+This is a Django-based backend project for a **Spin & Win** game app. It includes features like user registration, quizzes, predictions, OTP verification, wallet and payment integrations, and spinning/scratching rewards.
+
+---
 
 ## 🚀 Features
 
@@ -14,9 +16,9 @@ This is a Django-based backend project for a **Spin & Win** game app. It include
 - 🪙 Funds Management
 - 🖼️ Banners API for App Display
 
-## 🔗 API Endpoints
+---
 
-Here’s a list of all available routes (via DRF `router.register()`):
+## 🔗 API Endpoints
 
 | Endpoint | View | Description |
 |---------|------|-------------|
@@ -38,30 +40,23 @@ Here’s a list of all available routes (via DRF `router.register()`):
 | `dynamic/funds/` | `CoinsPaymentView` | Funds management |
 | `banners/` | `BannersView` | Retrieve promotional banners |
 
+---
+
 ## 🧰 Tech Stack
 
 - Python 3.10+
 - Django 4+
 - Django REST Framework
-- SQLite / PostgreSQL
-- JWT / Token Auth (assumed for OTP)
+- PostgreSQL
+- Docker + Docker Compose
+- Gunicorn (for production serving)
 
-## ⚙️ Setup Instructions
+---
+
+## 🐳 Dockerized Setup
+
+### 1. 📦 Clone & Configure
 
 ```bash
-# Clone the repo
 git clone https://github.com/your-username/spin-and-win-backend.git
 cd spin-and-win-backend
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Migrate DB
-python manage.py migrate
-
-# Run server
-python manage.py runserver
